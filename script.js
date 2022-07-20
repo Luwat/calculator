@@ -17,4 +17,3 @@ const operate = () => {
     if(operator === '/') return divide(num1, num2);
 }
 
-console.log(operate())

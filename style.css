@@ -1,4 +1,45 @@
-*::after, *::before{
-    margin: auto;
+*, *::after, *::before{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
     padding: 0;
+}
+
+.container-grid {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(6, 70px);
+}
+
+.container-grid .output {
+    border-radius: 10px 10px 0 0;
+    border: 1px solid white;
+    outline: 1px solid black;
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 80);
+}
+
+.container-grid > button {
+    border-radius: 0px 0px 20% 20%;
+    border: 1px solid white;
+    background-color: rgb(70, 45, 55);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.container-grid > button:hover {
+    background-color: rgb(209, 206, 206);
+    color: black;
+}
+
+.span-two {
+    grid-column: span 2;
 }
