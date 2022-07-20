@@ -5,8 +5,9 @@
 }
 
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #54d954, #d9d9d9, #54c654);
 }
 
 .container-grid {
@@ -17,18 +18,21 @@ body {
     grid-template-rows: minmax(100px, auto) repeat(6, 70px);
 }
 
-.container-grid .output {
+.output {
     border-radius: 10px 10px 0 0;
-    border: 1px solid white;
-    outline: 1px solid black;
     grid-column: 1/-1;
     background-color: rgba(0, 0, 0, 80);
+    color: rgb(210, 210, 210);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .container-grid > button {
-    border-radius: 0px 0px 20% 20%;
-    border: 1px solid white;
-    background-color: rgb(70, 45, 55);
+    border: none;
+    background-color: rgb(15, 15, 15);
     color: white;
     font-size: 20px;
     cursor: pointer;
@@ -42,4 +46,8 @@ body {
 
 .span-two {
     grid-column: span 2;
+}
+
+.header, .footer {
+    text-align: center;
 }
