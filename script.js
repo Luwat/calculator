@@ -26,10 +26,17 @@ const clear = () => {
 
 
 const operate = (operator) => {
-    operator = ['+', '-', '/', '*']
-    const prev = parseFloat(previousOperandDisplay.innerText);
+    const prev = parseInt(previousOperandDisplay.innerText);
     const current = parseFloat(currentOperandDisplay.innerText);
-    let computation
+    if (operator === '+') {
+        return prev + current;
+    } else if (operator === '-'){
+        return prev - current;
+    } else if (operator === '*'){
+        return console.log(prev * current);
+    } else if (operator === '/'){
+        return console.log(prev / current);
+    }
 };
 
 
